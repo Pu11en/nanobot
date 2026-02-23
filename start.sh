@@ -31,4 +31,5 @@ EOF
 echo "Config generated:"
 cat /root/.nanobot/config.json
 
-exec nanobot gateway
+# Pass port via command line to ensure it's used
+exec nanobot gateway --port ${PORT:-18790}
